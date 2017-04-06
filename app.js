@@ -10,11 +10,12 @@ var routes = require('./routes/index');
 
 var app = express();
 
+// Fill in your MySQL credentials.
 var con = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : 'hcra',
-  database : 'hcra'
+  host     : '',
+  user     : '',
+  password : '',
+  database : ''   // user should have full read access to the database
 });
 
 // view engine setup

@@ -5,10 +5,10 @@ var mysql = require('mysql');
 var dbFuncs = require('./dbFuncs');
 
 var con = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : 'hcra',
-  database : 'hcra'
+  host     : '',
+  user     : '',    // user should have create table and insert privileges to selected database
+  password : '',
+  database : ''
 });
 // drop and create hcra table
 var dropTable = con.query(dbFuncs.dropHcraTableSQL, function(err, rows, fields){
@@ -53,8 +53,6 @@ var getUrlAndParseTable = function(url, callback){
       $('#content table').each(function(){
         if($(this).find('caption').text() === 'KEY'){
         } else {
-          //this is the table
-          // var rowCount = 0
           $(this).find('tr').each(function(key,val){
             if( key == 0 ){
               
