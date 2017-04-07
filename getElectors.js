@@ -1,4 +1,3 @@
-var async = require('async');
 var request = require('request');
 var cheerio = require('cheerio');
 var mysql = require('mysql');
